@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: presentations
+  exclude:
+    - "*.ipynb"
   
 website:
   title: "gendered_paintings"
