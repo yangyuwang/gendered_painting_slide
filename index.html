@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.29">
 
   <meta name="author" content="Yangyu Wang">
-  <meta name="dcterms.date" content="2025-05-06">
+  <meta name="dcterms.date" content="2025-05-10">
   <title>Every Portrait Tells a Story</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -165,7 +165,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
     </div>
 </div>
 
-  <p class="date">May 6, 2025</p>
+  <p class="date">May 10, 2025</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -199,114 +199,98 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 </section>
 <section id="roadmap" class="slide level2">
 <h2>Roadmap</h2>
-<p>RQ: How are genders depicted in paintings through the history?</p>
+<p><strong>RQ: How are genders depicted in paintings through the history?</strong></p>
+<div class="fragment">
 <ol type="1">
 <li><p>Theoretical Background</p></li>
 <li><p>Data &amp; Methods</p></li>
 <li><p>Results: Tracing Gender Disparities in Paintings</p></li>
 <li><p>Discussion &amp; Conclusion</p></li>
 </ol>
+</div>
 </section>
 <section>
 <section id="theoretical-background" class="title-slide slide level1 center">
 <h1>Theoretical Background</h1>
 
 </section>
-<section id="cultures-reinforce-inequality" class="slide level2">
-<h2>Cultures Reinforce Inequality</h2>
+<section id="cultures-to-inequality" class="slide level2">
+<h2>Cultures to Inequality</h2>
 <ul>
 <li><p><span class="alert"><strong>Sociological theories</strong></span> long argued the cultural inequality</p>
 <ul>
-<li><span class="citation" data-cites="goffmanGenderAdvertisements1979">Goffman (<a href="#/references" role="doc-biblioref" onclick="">1979</a>)</span></li>
-<li><span class="citation" data-cites="bourdieuDistinctionSocialCritique1984">Bourdieu (<a href="#/references" role="doc-biblioref" onclick="">1984</a>)</span></li>
-<li><span class="citation" data-cites="lamontWhatMissingCultural2014">Lamont, Beljean, and Clair (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></li>
+<li>Symbolic interactionsim perspective <span class="citation" data-cites="goffman_gender_1979">(<a href="#/references" role="doc-biblioref" onclick="">Goffman 1979</a>)</span></li>
+<li>Structuralism perspective <span class="citation" data-cites="bourdieu_distinction_1984">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 1984</a>)</span></li>
+<li>Cultural Boundaries - Inequality <span class="citation" data-cites="lamont_what_2014">(<a href="#/references" role="doc-biblioref" onclick="">Lamont, Beljean, and Clair 2014</a>)</span></li>
 </ul></li>
+</ul>
+<div class="fragment">
+<ul>
 <li><p><span class="alert"><strong>Feminist art historical studies</strong></span> observed gender inequality in cultures</p>
 <ul>
-<li><span class="citation" data-cites="mulveyVisualPleasureNarrative1975">Mulvey (<a href="#/references" role="doc-biblioref" onclick="">1975</a>)</span></li>
-<li><span class="citation" data-cites="nochlinWomenArtPower1989">Nochlin (<a href="#/references" role="doc-biblioref" onclick="">1989</a>)</span></li>
-</ul></li>
-<li><p>Findings in <span class="alert"><strong>Computational Text Analyses</strong></span></p>
-<ul>
-<li><span class="citation" data-cites="gargWordEmbeddingsQuantify2018">Garg et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></li>
-<li><span class="citation" data-cites="charlesworthHistoricalRepresentationsSocial2022">Charlesworth, Caliskan, and Banaji (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></li>
+<li><em>“Male Gaze”</em> <span class="citation" data-cites="mulvey_visual_1975 nochlin_women_1989">(<a href="#/references" role="doc-biblioref" onclick="">Mulvey 1975</a> for film; <a href="#/references" role="doc-biblioref" onclick="">Nochlin 1989</a> for art history)</span></li>
+<li><em>“Men act and women appear.”</em> <span class="citation" data-cites="berger_ways_1972">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>)</span></li>
 </ul></li>
 </ul>
-</section>
-<section id="yet-results-in-visual-materials-are-controversial" class="slide level2">
-<h2>Yet, Results in Visual Materials are Controversial…</h2>
-<ul>
-<li><span class="citation" data-cites="adukiaWhatWeTeach2023">Adukia et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>: Gender representing in children’s books</li>
-<li><span class="citation" data-cites="guilbeaultOnlineImagesAmplify2024">Guilbeault et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>: Online images amplify gender biases</li>
-</ul>
-</section>
-<section id="distinguishing-two-dimensions-of-cultural-inequality" class="slide level2">
-<h2>Distinguishing Two Dimensions of Cultural Inequality</h2>
-<p>The major gap between the two papers is how they approach “inequality”.</p>
-<div class="fragment">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: center;">Frequency-based Inequality</th>
-<th style="text-align: center;">Feature-based Inequality</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Text</strong></td>
-<td style="text-align: center;">Word Counts</td>
-<td style="text-align: center;">Word Embeddings</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Image</strong></td>
-<td style="text-align: center;"><span class="alert">Figure Counts</span></td>
-<td style="text-align: center;"><span class="alert">Figure Features</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: center;"><span class="citation" data-cites="adukiaWhatWeTeach2023">(<a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>)</span></td>
-<td style="text-align: center;"><span class="citation" data-cites="guilbeaultOnlineImagesAmplify2024">(<a href="#/references" role="doc-biblioref" onclick="">Guilbeault et al. 2024</a>)</span></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="fragment">
-<p>By analyzing both dimensions upon painting, a visual culture format with deliberation <span class="citation" data-cites="bergerWaysSeeing1972">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>)</span> and long history <span class="citation" data-cites="aubertPleistoceneCaveArt2014">(<a href="#/references" role="doc-biblioref" onclick="">Aubert et al. 2014</a>)</span> visual art format, this research would like to <strong>systematically examine the gender inequality in visual cultures</strong>.</p>
+<ul>
+<li><p><span class="alert"><strong>Computational Analyses</strong></span> supported the ideas</p>
+<ul>
+<li>Texts: <span class="citation" data-cites="garg_word_2018">Garg et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>; <span class="citation" data-cites="charlesworth_historical_2022">Charlesworth, Caliskan, and Banaji (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></li>
+<li>Images: <span class="citation" data-cites="adukia_what_2023">Adukia et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>; <span class="citation" data-cites="guilbeault_online_2024">Guilbeault et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="gender-inequality-in-paintings" class="slide level2">
+<h2>Gender Inequality in Paintings</h2>
+<p>Why paintings are crucial for gender inequality?</p>
+<ul>
+<li><p>With deliberation <span class="citation" data-cites="berger_ways_1972">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>)</span> and long history <span class="citation" data-cites="aubert_pleistocene_2014">(<a href="#/references" role="doc-biblioref" onclick="">Aubert et al. 2014</a>)</span>.</p></li>
+<li><p>Large-scale inequality analyses are mainly upon <span class="alert">“real”/“factual” images</span> <span class="citation" data-cites="adukia_what_2023 guilbeault_online_2024">(<a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Guilbeault et al. 2024</a>)</span>, with little focus on <span class="alert">low-indexical images</span> <span class="citation" data-cites="buchler_logic_1940">(<a href="#/references" role="doc-biblioref" onclick="">Peirce 1940</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="gender-inequality-in-paintings-two-pathways" class="slide level2">
+<h2>Gender Inequality in Paintings: Two Pathways</h2>
+<div class="fragment">
+<ul>
+<li><p>Inequality by <span class="alert">Otherness</span> <span class="citation" data-cites="goffman_gender_1979">(<a href="#/references" role="doc-biblioref" onclick="">Goffman 1979</a>)</span>:</p>
+<ul>
+<li>Women are more tiny and avoidant, deployed to underscore masculine power and strength rather than portrayed as autonomous subjects</li>
+<li>echoing the notion of “the second sex” <span class="citation" data-cites="beauvoir_second_2012">(<a href="#/references" role="doc-biblioref" onclick="">Beauvoir 2012</a>)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Inequality by <span class="alert">Objectification</span> <span class="citation" data-cites="mulvey_visual_1975">(<a href="#/references" role="doc-biblioref" onclick="">Mulvey 1975</a>)</span></p>
+<ul>
+<li>Female figures are objectified as idealized embodiments of beauty, rendered with exaggerated scale and frontal prominence to satisfy an implicitly masculine viewer</li>
+<li>examined by content analysis in art historical research <span class="citation" data-cites="berger_ways_1972 nochlin_women_1989">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>; <a href="#/references" role="doc-biblioref" onclick="">Nochlin 1989</a>)</span></li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="hypotheses-gender-disparity-in-paintings" class="slide level2">
 <h2>Hypotheses: Gender Disparity in Paintings</h2>
 <div class="fragment">
-<p><strong>H1</strong>: Female characters appear less frequently in paintings than male.</p>
+<p><strong>H1</strong>: Female characters appear <span class="alert">less frequently</span> in paintings than male.</p>
 </div>
 <div class="fragment">
-<ul>
-<li>Two Conflicted Theories
-<ul>
-<li>From advertisements <span class="citation" data-cites="goffmanGenderAdvertisements1979">(<a href="#/references" role="doc-biblioref" onclick="">Goffman 1979</a>)</span>: Female figures are more <span class="alert">tiny</span>, <span class="alert">avoidant</span> to the camera sights, and <span class="alert">leaning</span>, than male figures, similar to the idea of “the second sex” <span class="citation" data-cites="beauvoirSecondSex2012">(<a href="#/references" role="doc-biblioref" onclick="">Beauvoir 1949</a>)</span>.</li>
-<li>From movies <span class="citation" data-cites="mulveyVisualPleasureNarrative1975">(<a href="#/references" role="doc-biblioref" onclick="">Mulvey 1975</a>)</span>: Female figures are more <span class="alert">objectified</span>, thus more <span class="alert">large</span> and <span class="alert">frontal</span> towards the audience, than male figures, as so-called “male gaze”.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="hypotheses-gender-disparity-in-paintings-1" class="slide level2">
-<h2>Hypotheses: Gender Disparity in Paintings</h2>
-<p><strong>H1</strong>: Female characters appear less frequently in paintings than male.</p>
-<div class="fragment">
-<p><strong>H2</strong>: Sizes of different genders in paintings are different.</p>
-<pre><code> H2.A: Female characters in the paintings are larger than male characters in sizes.
+<p><strong>H2</strong>: <span class="alert">Sizes</span> of different genders in paintings are different.</p>
+<pre><code> H2.A: Female characters in the paintings are [larger]{.alert} than male characters in sizes.
 
- H2.B: Female characters in the paintings are smaller than male characters in sizes.</code></pre>
+ H2.B: Female characters in the paintings are [smaller]{.alert} than male characters in sizes.</code></pre>
 </div>
 <div class="fragment">
-<p><strong>H3</strong>: Postures of different genders in paintings are different.</p>
-<pre><code> H2.A: Female characters in the paintings are more oblique than male characters.
+<p><strong>H3</strong>: <span class="alert">Postures</span> of different genders in paintings are different.</p>
+<pre><code> H2.A: Female characters in the paintings are more [oblique]{.alert} than male characters.
 
- H2.B: Female characters in the paintings are more frontal than male characters.</code></pre>
+ H2.B: Female characters in the paintings are more [frontal]{.alert} than male characters.</code></pre>
 </div>
 <div class="fragment">
-<p><strong>H4</strong>: Marginalized artists will depict female and male characters in a more equal manner, compared to the artists from dominant groups.</p>
+<p><strong>H4</strong>: <span class="alert">Marginalized artists</span> will depict female and male characters in a <span class="alert">more equal manner</span>, compared to the artists from dominant groups.</p>
 </div>
 </section></section>
 <section>
@@ -316,17 +300,66 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 </section>
 <section id="wikiart.org-dataset" class="slide level2">
 <h2>WikiArt.org Dataset</h2>
+<p>A user-generated artwork database</p>
+<p>“WikiArt already features some 250.000 artworks by 3.000 artists”</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/example_artwork.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/example_artist.png"></p>
+</div></div>
 </section>
 <section id="artwork-information-face-detection" class="slide level2">
 <h2>Artwork Information: Face Detection</h2>
-</section>
-<section id="artist-information-llm-extraction" class="slide level2">
-<h2>Artist Information: LLM Extraction</h2>
-</section>
-<section id="regressions-fixed-effect-on-face-counts" class="slide level2">
-<h2>Regressions: Fixed Effect on Face Counts</h2>
 <ol type="1">
-<li>Baseline Model:
+<li><p><span class="alert">Face Detection</span>: RetinaFace <span class="citation" data-cites="deng_retinaface_2019">(<a href="#/references" role="doc-biblioref" onclick="">Deng et al. 2019</a>)</span></p></li>
+<li><p><span class="alert">Gender Detection</span>: DeepFace <span class="citation" data-cites="taigman_deepface_2014">(<a href="#/references" role="doc-biblioref" onclick="">Taigman et al. 2014</a>)</span>]</p></li>
+<li><p><span class="alert">Face Modeling</span>: Comparing current face model to a neutral face model</p>
+<ul>
+<li>To get the <em>Yaw</em>, <em>Pitch</em>, and <em>Roll</em> values of faces</li>
+</ul></li>
+</ol>
+
+<img data-src="img/yawpitchroll.png" class="r-stretch"></section>
+<section id="artwork-information-variables" class="slide level2">
+<h2>Artwork Information: Variables</h2>
+<ol type="1">
+<li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance).</p></li>
+</ol>
+<div class="fragment">
+<p><img data-src="img/3_3_GenderSizeDens.png"></p>
+</div>
+</section>
+<section id="artwork-information-variables-1" class="slide level2">
+<h2>Artwork Information: Variables</h2>
+<ol type="1">
+<li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance).</p></li>
+</ol>
+<div class="fragment">
+<p><img data-src="img/3_2_GenderPosFacDens.png"></p>
+</div>
+</section>
+<section id="artwork-information-variables-2" class="slide level2">
+<h2>Artwork Information: Variables</h2>
+
+<img data-src="img/3_5_GenderPosSizeTrendPbar.png" class="r-stretch"></section>
+<section id="artist-information-variables" class="slide level2">
+<h2>Artist Information: Variables</h2>
+<p>Extracted from Wikipedia texts of artists by GPT-4o-mini with few-shot chain-of-thought prompt</p>
+<ol type="1">
+<li><p><span class="alert">Gender</span>: three categories of <em>“female”</em>, <em>“male”</em>, and <em>“non-binary”</em>.</p></li>
+<li><p><span class="alert">Education</span>: two categories of <em>“self-taught”</em> and <em>“formal”</em>.</p></li>
+</ol>
+<div class="fragment">
+<p><span class="alert">Marginalized vs.&nbsp;dominant artists</span>: Female vs.&nbsp;Male, Self-taught vs.&nbsp;formal</p>
+</div>
+</section>
+<section id="regressions-random-intercepts-on-face-counts" class="slide level2">
+<h2>Regressions: Random Intercepts on Face Counts</h2>
+<ol type="1">
+<li><p>Baseline Model:</p>
 <div style="font-size:0.8em; text-align:center;">
 <p><span class="math display">\[
 \begin{aligned}
@@ -337,7 +370,7 @@ Y_{ij} = \beta_0 + \beta_1\, \text{FaceGender}_{ij} + \beta_2\, \text{ArtistInfo
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
-<li>Period-interacted Model:
+<li><p>Period-interacted Model:</p>
 <div style="font-size:0.8em; text-align:center;">
 <p><span class="math display">\[
 \begin{aligned}
@@ -406,41 +439,50 @@ Y_{ij} =\; &amp; \beta_0 + \beta_1'\, \text{FaceGender}_{ij} + \beta_2'\, \text{
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-adukiaWhatWeTeach2023" class="csl-entry" role="listitem">
+<div id="ref-adukia_what_2023" class="csl-entry" role="listitem">
 Adukia, Anjali, Alex Eble, Emileigh Harrison, Hakizumwami Birali Runesha, and Teodora Szasz. 2023. <span>“What We Teach about Race and Gender: Representation in Images and Text of Children’s Books.”</span> <em>The Quarterly Journal of Economics</em> 138 (4): 2225–85. <a href="https://doi.org/10.1093/qje/qjad028">https://doi.org/10.1093/qje/qjad028</a>.
 </div>
-<div id="ref-aubertPleistoceneCaveArt2014" class="csl-entry" role="listitem">
+<div id="ref-aubert_pleistocene_2014" class="csl-entry" role="listitem">
 Aubert, M., A. Brumm, M. Ramli, T. Sutikna, E. W. Saptomo, B. Hakim, M. J. Morwood, G. D. van den Bergh, L. Kinsley, and A. Dosseto. 2014. <span>“Pleistocene Cave Art from Sulawesi, Indonesia.”</span> <em>Nature</em> 514 (7521): 223–27. <a href="https://doi.org/10.1038/nature13422">https://doi.org/10.1038/nature13422</a>.
 </div>
-<div id="ref-beauvoirSecondSex2012" class="csl-entry" role="listitem">
-Beauvoir, Simone De. 1949. <em>The Second Sex</em>. New York: Knopf Doubleday Publishing Group.
+<div id="ref-beauvoir_second_2012" class="csl-entry" role="listitem">
+Beauvoir, Simone De. 2012. <em>The Second Sex</em>. New York: Knopf Doubleday Publishing Group.
 </div>
-<div id="ref-bergerWaysSeeing1972" class="csl-entry" role="listitem">
+<div id="ref-berger_ways_1972" class="csl-entry" role="listitem">
 Berger, John. 1972. <em>Ways of Seeing</em>. London: Penguin Books.
 </div>
-<div id="ref-bourdieuDistinctionSocialCritique1984" class="csl-entry" role="listitem">
+<div id="ref-bourdieu_distinction_1984" class="csl-entry" role="listitem">
 Bourdieu, Pierre. 1984. <em>Distinction: A Social Critique of the Judgement of Taste</em>. Cambridge: Harvard University Press.
 </div>
-<div id="ref-charlesworthHistoricalRepresentationsSocial2022" class="csl-entry" role="listitem">
+<div id="ref-charlesworth_historical_2022" class="csl-entry" role="listitem">
 Charlesworth, Tessa E. S., Aylin Caliskan, and Mahzarin R. Banaji. 2022. <span>“Historical Representations of Social Groups Across 200 Years of Word Embeddings from Google Books.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (28): e2121798119. <a href="https://doi.org/10.1073/pnas.2121798119">https://doi.org/10.1073/pnas.2121798119</a>.
 </div>
-<div id="ref-gargWordEmbeddingsQuantify2018" class="csl-entry" role="listitem">
+<div id="ref-deng_retinaface_2019" class="csl-entry" role="listitem">
+Deng, Jiankang, Jia Guo, Yuxiang Zhou, Jinke Yu, Irene Kotsia, and Stefanos Zafeiriou. 2019. <span>“<span>RetinaFace</span>: Single-Stage Dense Face Localisation in the Wild.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1905.00641">https://doi.org/10.48550/arXiv.1905.00641</a>.
+</div>
+<div id="ref-garg_word_2018" class="csl-entry" role="listitem">
 Garg, Nikhil, Londa Schiebinger, Dan Jurafsky, and James Zou. 2018. <span>“Word Embeddings Quantify 100 Years of Gender and Ethnic Stereotypes.”</span> <em>Proceedings of the National Academy of Sciences</em> 115 (16): E3635–44. <a href="https://doi.org/10.1073/pnas.1720347115">https://doi.org/10.1073/pnas.1720347115</a>.
 </div>
-<div id="ref-goffmanGenderAdvertisements1979" class="csl-entry" role="listitem">
+<div id="ref-goffman_gender_1979" class="csl-entry" role="listitem">
 Goffman, Erving. 1979. <em>Gender Advertisements</em>. New York: Harper &amp; Row.
 </div>
-<div id="ref-guilbeaultOnlineImagesAmplify2024" class="csl-entry" role="listitem">
+<div id="ref-guilbeault_online_2024" class="csl-entry" role="listitem">
 Guilbeault, Douglas, Solène Delecourt, Tasker Hull, Bhargav Srinivasa Desikan, Mark Chu, and Ethan Nadler. 2024. <span>“Online Images Amplify Gender Bias.”</span> <em>Nature</em> 626 (8001): 1049–55. <a href="https://doi.org/10.1038/s41586-024-07068-x">https://doi.org/10.1038/s41586-024-07068-x</a>.
 </div>
-<div id="ref-lamontWhatMissingCultural2014" class="csl-entry" role="listitem">
+<div id="ref-lamont_what_2014" class="csl-entry" role="listitem">
 Lamont, Michèle, Stefan Beljean, and Matthew Clair. 2014. <span>“What Is Missing? Cultural Processes and Causal Pathways to Inequality.”</span> <em>Socio-Economic Review</em> 12 (3): 573–608. <a href="https://doi.org/10.1093/ser/mwu011">https://doi.org/10.1093/ser/mwu011</a>.
 </div>
-<div id="ref-mulveyVisualPleasureNarrative1975" class="csl-entry" role="listitem">
+<div id="ref-mulvey_visual_1975" class="csl-entry" role="listitem">
 Mulvey, Laura. 1975. <span>“Visual Pleasure and Narrative Cinema.”</span> <em>Screen</em> 16 (3): 6–18. <a href="https://doi.org/10.1093/screen/16.3.6">https://doi.org/10.1093/screen/16.3.6</a>.
 </div>
-<div id="ref-nochlinWomenArtPower1989" class="csl-entry" role="listitem">
+<div id="ref-nochlin_women_1989" class="csl-entry" role="listitem">
 Nochlin, Linda. 1989. <em>Women, Art, and Power and Other Essays</em>. New York: Avalon Publishing.
+</div>
+<div id="ref-buchler_logic_1940" class="csl-entry" role="listitem">
+Peirce, Charles Sanders. 1940. <span>“Logic as Semiotic: The Theory of Signs.”</span> In <em>The Philosophy of Peirce</em>, edited by Justus Buchler. Routledge.
+</div>
+<div id="ref-taigman_deepface_2014" class="csl-entry" role="listitem">
+Taigman, Yaniv, Ming Yang, Marc’Aurelio Ranzato, and Lior Wolf. 2014. <span>“<span>DeepFace</span>: Closing the Gap to Human-Level Performance in Face Verification.”</span> In <em>2014 <span>IEEE</span> Conference on Computer Vision and Pattern Recognition</em>, 1701–8. <a href="https://doi.org/10.1109/CVPR.2014.220">https://doi.org/10.1109/CVPR.2014.220</a>.
 </div>
 </div>
 
