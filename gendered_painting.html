@@ -197,7 +197,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <p><img data-src="img/woman_1.png" style="width:50.0%"></p>
 </div></div>
 </section>
-<section id="roadmap" class="slide level2">
+<section id="roadmap" class="slide level2 center">
 <h2>Roadmap</h2>
 <p><strong>RQ: How are genders depicted in paintings through the history?</strong></p>
 <div class="fragment">
@@ -214,9 +214,8 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <h1>Theoretical Background</h1>
 
 </section>
-<section id="cultures-to-inequality" class="slide level2">
-<h2>Cultures to Inequality</h2>
-<div class="fragment">
+<section id="from-culture-to-inequality" class="slide level2">
+<h2>From Culture to Inequality*</h2>
 <ul>
 <li><p><span class="alert"><strong>Sociological theories</strong></span> long argued the cultural inequality</p>
 <ul>
@@ -224,26 +223,17 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <li>Structuralism perspective <span class="citation" data-cites="bourdieuDistinctionSocialCritique1984">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 1984</a>)</span></li>
 <li>Cultural Boundaries-Inequality <span class="citation" data-cites="lamontWhatMissingCultural2014">(<a href="#/references" role="doc-biblioref" onclick="">Lamont, Beljean, and Clair 2014</a>)</span></li>
 </ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
 <li><p><span class="alert"><strong>Feminist art historical studies</strong></span> observed gender inequality in cultures</p>
 <ul>
 <li><em>“Male Gaze”</em> <span class="citation" data-cites="mulveyVisualPleasureNarrative1975 nochlinWomenArtPower1989">(<a href="#/references" role="doc-biblioref" onclick="">Mulvey 1975</a> for film; <a href="#/references" role="doc-biblioref" onclick="">Nochlin 1989</a> for art history)</span></li>
 <li><em>“Men act and women appear.”</em> <span class="citation" data-cites="bergerWaysSeeing1972">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>)</span></li>
 </ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
 <li><p><span class="alert"><strong>Computational Analyses</strong></span> supported the ideas</p>
 <ul>
 <li>Texts <span class="citation" data-cites="gargWordEmbeddingsQuantify2018 charlesworthHistoricalRepresentationsSocial2022">(<a href="#/references" role="doc-biblioref" onclick="">Garg et al. 2018</a>; <a href="#/references" role="doc-biblioref" onclick="">Charlesworth, Caliskan, and Banaji 2022</a>)</span></li>
 <li>Images <span class="citation" data-cites="adukiaWhatWeTeach2023 guilbeaultOnlineImagesAmplify2024">(<a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Guilbeault et al. 2024</a>)</span></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="gender-inequality-in-paintings" class="slide level2">
 <h2>Gender Inequality in Paintings</h2>
@@ -264,7 +254,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <li><p>Inequality by <span class="alert">Otherness</span> <span class="citation" data-cites="goffmanGenderAdvertisements1979">(<a href="#/references" role="doc-biblioref" onclick="">Goffman 1979</a>)</span>:</p>
 <ul>
 <li>Women are more tiny and avoidant, deployed to underscore masculine power and strength rather than portrayed as autonomous subjects</li>
-<li>echoing the notion of “the second sex” <span class="citation" data-cites="beauvoirSecondSex2012">(<a href="#/references" role="doc-biblioref" onclick="">Beauvoir 2012</a>)</span></li>
+<li>echoing the notion of “the second sex” <span class="citation" data-cites="beauvoirSecondSex2012">(<a href="#/references" role="doc-biblioref" onclick="">Beauvoir 1949</a>)</span></li>
 </ul></li>
 </ol>
 </div>
@@ -351,7 +341,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <h2>Artwork Information: Variables</h2>
 
 <img data-src="img/3_5_GenderPosSizeTrendPbar.png" class="r-stretch"></section>
-<section id="artist-information-variables" class="slide level2">
+<section id="artist-information-variables" class="slide level2 center">
 <h2>Artist Information: Variables</h2>
 <p>Extracted from Wikipedia texts of artists by GPT-4o-mini with few-shot chain-of-thought prompt</p>
 <ol type="1">
@@ -364,39 +354,34 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 </section>
 <section id="regressions-random-intercepts-on-face-counts" class="slide level2">
 <h2>Regressions: Random Intercepts on Face Counts</h2>
+<div class="fragment">
 <ol type="1">
 <li><p>Baseline Model:</p>
 <div style="font-size:0.7em; text-align:center;">
 <p><span class="math display">\[
 \begin{aligned}
-Y_{ij} = \beta_0 + \beta_1\, \text{FaceGender}_{ij} + \beta_2\, \text{ArtistInfo}_{j} + \sum_{t=1}^{T}\beta_t\, \text{Period}_{ij} + \sum_{k=1}^{K} \gamma_k\, D_{k,j} + \epsilon_{ij}
-\end{aligned}
-\]</span></p>
-</div></li>
-</ol>
-<div class="fragment">
-<ol start="2" type="1">
-<li><p>Period-interacted Model - Trend Analysis:</p>
-<div style="font-size:0.7em; text-align:center;">
-<p><span class="math display">\[
-\begin{aligned}
-Y_{ij} =\; &amp; \beta_0 + \beta_1'\, \text{FaceGender}_{ij} + \beta_2'\, \text{ArtistInfo}_{j} + \sum_{t=1}^{T}\beta_t'\, \text{Period}_{ij} + \sum_{k=1}^{K} \gamma_k'\, D_{k,j}' + \epsilon_{ij}'
-\label{eq:inter1} \notag \\
-&amp; + \sum_{t=1}^{T}\beta_{t1}'\, \text{Period}_{ij} \times \text{FaceGender}_{ij}
+Y_{ij} \sim \beta_0 + \beta_1\, \text{FaceGender}_{ij} + \beta_2\, \text{ArtistInfo}_{j} + \sum_{t=1}^{T}\beta_t\, \text{Period}_{ij}
 \end{aligned}
 \]</span></p>
 </div>
-<p>Therefore, the coefficients of face gender for each period:</p>
-<div style="font-size:0.7em; text-align:center;">
+<p><span class="math inline">\(\therefore\)</span> <span class="alert">Gender disparity</span> <span class="math inline">\(\scriptsize \sim \beta_1\)</span></p></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><p>Period-interacted Model - Trend Analysis:</p>
+<div style="font-size:0.7em; text-align:left;">
 <p><span class="math display">\[
-\beta_{1t}' = \beta_1' + \beta_t'
+Y_{ij} \sim \beta_0' + \beta_1'\, \text{FaceGender}_{ij} + \beta_2'\, \text{ArtistInfo}_{j} + \sum_{t=1}^{T}\beta_t'\, \text{Period}_{ij} \\
++ \sum_{t=1}^{T}\beta_{t1}'\, \text{Period}_{ij} \times \text{FaceGender}_{ij}
 \]</span></p>
-</div></li>
+</div>
+<p><span class="math inline">\(\therefore\)</span> <span class="alert">Gender disparities for each period</span> <span class="math inline">\(\scriptsize \sim \beta_{1t}' = \beta_1' + \beta_t'\)</span></p></li>
 </ol>
 </div>
 </section>
 <section id="content-analysis-upon-paintings" class="slide level2">
-<h2>Content Analysis upon Paintings</h2>
+<h2>Content Analysis upon Paintings*</h2>
 <p>Follow the idea of purposeful sampling <span class="citation" data-cites="palinkasPurposefulSamplingQualitative2015">(<a href="#/references" role="doc-biblioref" onclick="">Palinkas et al. 2015</a>)</span></p>
 <div class="fragment">
 <ul>
@@ -462,19 +447,22 @@ Y_{ij} =\; &amp; \beta_0 + \beta_1'\, \text{FaceGender}_{ij} + \beta_2'\, \text{
 </div></div>
 </section>
 <section id="tracing-gender-disparities-in-paintings-14002024-2" class="slide level2">
-<h2>Tracing Gender Disparities in Paintings, 1400–2024</h2>
+<h2>Tracing Gender Disparities in Paintings, 1400–2024*</h2>
 
 <img data-src="img/6_GenderCoefTrend_edited.png" class="r-stretch"></section>
 <section id="tracing-gender-disparities-in-paintings-14002024-3" class="slide level2">
-<h2>Tracing Gender Disparities in Paintings, 1400–2024</h2>
+<h2>Tracing Gender Disparities in Paintings, 1400–2024*</h2>
 
 <img data-src="img/painting_example.png" class="r-stretch"></section></section>
 <section>
 <section id="discussion-conclusion" class="title-slide slide level1 center">
 <h1>Discussion &amp; Conclusion</h1>
-
+<p>“Representation of the world, like the world itself, is the work of men; they describe it from their own point of view, which they confuse with absolute truth.”</p>
+<div style="text-align: right">
+<p>- <em>The Second Sex</em> (1949), by Simone de Beauvoir</p>
+</div>
 </section>
-<section id="summary-of-results" class="slide level2">
+<section id="summary-of-results" class="slide level2 center">
 <h2>Summary of Results</h2>
 <table class="caption-top">
 <thead>
@@ -578,7 +566,7 @@ Adukia, Anjali, Alex Eble, Emileigh Harrison, Hakizumwami Birali Runesha, and Te
 Aubert, M., A. Brumm, M. Ramli, T. Sutikna, E. W. Saptomo, B. Hakim, M. J. Morwood, G. D. van den Bergh, L. Kinsley, and A. Dosseto. 2014. <span>“Pleistocene Cave Art from Sulawesi, Indonesia.”</span> <em>Nature</em> 514 (7521): 223–27. <a href="https://doi.org/10.1038/nature13422">https://doi.org/10.1038/nature13422</a>.
 </div>
 <div id="ref-beauvoirSecondSex2012" class="csl-entry" role="listitem">
-Beauvoir, Simone De. 2012. <em>The Second Sex</em>. New York: Knopf Doubleday Publishing Group.
+Beauvoir, Simone De. 1949. <em>The Second Sex</em>. New York: Knopf Doubleday Publishing Group.
 </div>
 <div id="ref-bergerWaysSeeing1972" class="csl-entry" role="listitem">
 Berger, John. 1972. <em>Ways of Seeing</em>. London: Penguin Books.
