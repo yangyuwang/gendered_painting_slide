@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.29">
 
   <meta name="author" content="Yangyu Wang">
-  <meta name="dcterms.date" content="2025-05-12">
+  <meta name="dcterms.date" content="2025-05-13">
   <title>Every Portrait Tells a Story</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -165,7 +165,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
     </div>
 </div>
 
-  <p class="date">May 12, 2025</p>
+  <p class="date">May 13, 2025</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -308,20 +308,20 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <section id="artwork-information-face-detection" class="slide level2">
 <h2>Artwork Information: Face Detection</h2>
 <ol type="1">
-<li><p><span class="alert">Face Detection</span>: RetinaFace <span class="citation" data-cites="dengRetinaFaceSinglestageDense2019">(<a href="#/references" role="doc-biblioref" onclick="">Deng et al. 2019</a>)</span></p></li>
+<li><p><span class="alert">Face Detection</span>: RetinaFace <span class="citation" data-cites="dengRetinaFaceSinglestageDense2019">(<a href="#/references" role="doc-biblioref" onclick="">Deng et al. 2019</a>)</span> <a href="#/Appendix2"><span class="button">Face Count Trend</span></a></p></li>
 <li><p><span class="alert">Gender Detection</span>: DeepFace <span class="citation" data-cites="taigmanDeepFaceClosingGap2014">(<a href="#/references" role="doc-biblioref" onclick="">Taigman et al. 2014</a>)</span></p></li>
-<li><p><span class="alert">Face Modeling</span>: Comparing current face model to a neutral face model</p>
+<li><p><span class="alert">Face Modeling</span>: Constructing 3D models of faces, and comparing current face model to a neutral face model</p>
 <ul>
 <li>To get the <em>Yaw</em>, <em>Pitch</em>, and <em>Roll</em> values of faces</li>
 </ul></li>
 </ol>
 
-<img data-src="img/yawpitchroll.png" class="r-stretch"></section>
+<img data-src="img/yawpitchroll.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="artwork-information-variables" class="slide level2">
 <h2>Artwork Information: Variables</h2>
 <ol type="1">
 <li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
-<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance).</p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix2"><span class="button">Models upon raw values</span></a></p></li>
 </ol>
 <div class="fragment">
 <p><img data-src="img/3_3_GenderSizeDens.png"></p>
@@ -331,7 +331,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <h2>Artwork Information: Variables</h2>
 <ol type="1">
 <li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
-<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance).</p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix2"><span class="button">Models upon raw values</span></a></p></li>
 </ol>
 <div class="fragment">
 <p><img data-src="img/3_2_GenderPosFacDens.png"></p>
@@ -343,7 +343,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <img data-src="img/3_5_GenderPosSizeTrendPbar.png" class="r-stretch"></section>
 <section id="artist-information-variables" class="slide level2 center">
 <h2>Artist Information: Variables</h2>
-<p>Extracted from Wikipedia texts of artists by GPT-4o-mini with few-shot chain-of-thought prompt</p>
+<p>Extracted from <span class="alert">Wikipedia texts of artists by GPT-4o-mini with few-shot chain-of-thought prompt</span></p>
 <ol type="1">
 <li><p><span class="alert">Gender</span>: three categories of <em>“female”</em>, <em>“male”</em>, and <em>“non-binary”</em>.</p></li>
 <li><p><span class="alert">Education</span>: two categories of <em>“self-taught”</em> and <em>“formal”</em>.</p></li>
@@ -447,10 +447,6 @@ Y_{ij} \sim \beta_0' + \beta_1'\, \text{FaceGender}_{ij} + \beta_2'\, \text{Arti
 </div></div>
 </section>
 <section id="tracing-gender-disparities-in-paintings-14002024-2" class="slide level2">
-<h2>Tracing Gender Disparities in Paintings, 1400–2024*</h2>
-
-<img data-src="img/6_GenderCoefTrend_edited.png" class="r-stretch"></section>
-<section id="tracing-gender-disparities-in-paintings-14002024-3" class="slide level2">
 <h2>Tracing Gender Disparities in Paintings, 1400–2024*</h2>
 
 <img data-src="img/painting_example.png" class="r-stretch"></section></section>
@@ -635,8 +631,16 @@ Tuchman, Gaye. 2000. <span>“The Symbolic Annihilation of Women by the Mass Med
 Weitzman, Lenore J., Deborah Eifler, Elizabeth Hokada, and Catherine Ross. 1972. <span>“Sex-Role Socialization in Picture Books for Preschool Children.”</span> <em>American Journal of Sociology</em> 77 (6): 1125–50. <a href="https://doi.org/10.1086/225261">https://doi.org/10.1086/225261</a>.
 </div>
 </div>
+</section>
+<section id="Appendix1" class="slide level2">
+<h2>Appendix 1. Face Count Trend</h2>
 
-</section></section>
+<img data-src="img/1_FaceCountTrend.png" class="r-stretch"></section>
+<section id="Appendix2" class="slide level2">
+<h2>Appendix 2. Models upon <em>Size, Yaw, Pitch, Roll</em></h2>
+
+
+<img data-src="img/5_2_CoefPlotSep.png" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
