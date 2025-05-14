@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.29">
 
   <meta name="author" content="Yangyu Wang">
-  <meta name="dcterms.date" content="2025-05-13">
+  <meta name="dcterms.date" content="2025-05-14">
   <title>Every Portrait Tells a Story</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -165,7 +165,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
     </div>
 </div>
 
-  <p class="date">May 13, 2025</p>
+  <p class="date">May 14, 2025</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -308,9 +308,9 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <section id="artwork-information-face-detection" class="slide level2">
 <h2>Artwork Information: Face Detection</h2>
 <ol type="1">
-<li><p><span class="alert">Face Detection</span>: RetinaFace <span class="citation" data-cites="dengRetinaFaceSinglestageDense2019">(<a href="#/references" role="doc-biblioref" onclick="">Deng et al. 2019</a>)</span> <a href="#/Appendix2"><span class="button">Face Count Trend</span></a></p></li>
+<li><p><span class="alert">Face Detection</span>: RetinaFace <span class="citation" data-cites="dengRetinaFaceSinglestageDense2019">(<a href="#/references" role="doc-biblioref" onclick="">Deng et al. 2019</a>)</span> <a href="#/Appendix2"><span class="button">Face count trend</span></a></p></li>
 <li><p><span class="alert">Gender Detection</span>: DeepFace <span class="citation" data-cites="taigmanDeepFaceClosingGap2014">(<a href="#/references" role="doc-biblioref" onclick="">Taigman et al. 2014</a>)</span></p></li>
-<li><p><span class="alert">Face Modeling</span>: Constructing 3D models of faces, and comparing current face model to a neutral face model</p>
+<li><p><span class="alert">Face Modeling</span>: Constructing 3D models of faces, and comparing current face model to a neutral face model <a href="#/Appendix1"><span class="button">Example of face detection</span></a></p>
 <ul>
 <li>To get the <em>Yaw</em>, <em>Pitch</em>, and <em>Roll</em> values of faces</li>
 </ul></li>
@@ -321,7 +321,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <h2>Artwork Information: Variables</h2>
 <ol type="1">
 <li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
-<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix2"><span class="button">Models upon raw values</span></a></p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix3"><span class="button">Models upon raw values</span></a></p></li>
 </ol>
 <div class="fragment">
 <p><img data-src="img/3_3_GenderSizeDens.png"></p>
@@ -331,7 +331,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <h2>Artwork Information: Variables</h2>
 <ol type="1">
 <li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
-<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix2"><span class="button">Models upon raw values</span></a></p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix3"><span class="button">Models upon raw values</span></a></p></li>
 </ol>
 <div class="fragment">
 <p><img data-src="img/3_2_GenderPosFacDens.png"></p>
@@ -633,11 +633,15 @@ Weitzman, Lenore J., Deborah Eifler, Elizabeth Hokada, and Catherine Ross. 1972.
 </div>
 </section>
 <section id="Appendix1" class="slide level2">
-<h2>Appendix 1. Face Count Trend</h2>
+<h2>Appendix 1. Face Detection Examples</h2>
+
+<img data-src="img/example_detection.png" class="r-stretch"></section>
+<section id="Appendix2" class="slide level2">
+<h2>Appendix 2. Face Count Trend</h2>
 
 <img data-src="img/1_FaceCountTrend.png" class="r-stretch"></section>
-<section id="Appendix2" class="slide level2">
-<h2>Appendix 2. Models upon <em>Size, Yaw, Pitch, Roll</em></h2>
+<section id="Appendix3" class="slide level2">
+<h2>Appendix 3. Models upon <em>Size, Yaw, Pitch, Roll</em></h2>
 
 
 <img data-src="img/5_2_CoefPlotSep.png" class="r-stretch"></section></section>
