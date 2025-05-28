@@ -214,7 +214,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <p>*After all, download S3 bucket to Midway3 project folder</p>
 </section>
 <section id="step-2-model-training" class="slide level2">
-<h2>Step 2: <a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step2_diffuser_training">Model Training</a></h2>
+<h2><a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step2_diffuser_training">Step 2: Model Training</a></h2>
 
 <img data-src="30123_images/step2.png" class="r-stretch"></section>
 <section id="step-2-model-training-cond" class="slide level2">
@@ -240,7 +240,7 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 </div></div>
 </section>
 <section id="step-3-webiste-deployment" class="slide level2">
-<h2>Step 3: <a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step3_flask_app">Webiste Deployment</a></h2>
+<h2><a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step3_flask_app">Step 3: Webiste Deployment</a></h2>
 <p><img data-src="30123_images/step3.png"> Website is deployed to call Demographic2Art models on the GPU node, by <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step3_flask_app/app.py"><code>app.py</code></a> and <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step3_flask_app/app.sbatch"><code>app.sbatch</code></a>, and it could be <code>ssh</code> to the local machine.</p>
 </section>
 <section id="step-3-webiste-deployment-cond" class="slide level2">
@@ -269,14 +269,26 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 </div>
 </div></div>
 </section>
-<section id="alternative-ways-for-personal-aws-account" class="slide level2">
-<h2>*Alternative Ways for Personal AWS Account</h2>
+<section id="alternative-pipeline-for-personal-aws-account" class="slide level2">
+<h2>*Alternative Pipeline for Personal AWS Account</h2>
 <p>For a personal AWS account, we can collect data, train model, and deploy website all on cloud, by using the <a href="https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html">GPU resources it provide</a>.</p>
 <p>This would include following changes:</p>
 <ol type="1">
 <li><p>Step 1 would <span class="alert">not need to download data from S3 to Midway3</span>.</p></li>
 <li><p>Step 2 could just launch different EC2 instances to run grid search, as well as use the <a href="https://wandb.ai/site/"><span class="alert">Weights &amp; Biases API</span></a> to record the training process. Please see sweep_* files in the <a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step2_diffuser_training/samples">repository</a>.</p></li>
 <li><p>Step 3 could deploy a <span class="alert">public website directly</span>, instead of to ssh.</p></li>
+</ol>
+</section>
+<section id="future-works" class="slide level2">
+<h2>Future Works</h2>
+<ol type="1">
+<li><p>Make the website public or set it as <span class="alert">API</span> for painting generation</p></li>
+<li><p>Comparing between different artist demographic settings</p>
+<ol type="a">
+<li><span class="alert">Quantitatively</span>: use interpretable machine learning techniques to examine the parts affected by certain attributes.</li>
+<li><span class="alert">Qualitatively</span>: manually analyze the painting differences set to different demographic attributes</li>
+</ol></li>
+<li><p>Generate <span class="alert">counterfactual paintings</span> to check the social determinants of paintings, for example, <em>Vincent van Gogh born in the United States</em></p></li>
 </ol>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
